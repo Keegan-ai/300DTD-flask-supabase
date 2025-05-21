@@ -1,0 +1,40 @@
+
+
+{% extends 'pages/base.jinja' %}
+
+{% block title %}
+    Flask industries
+{% endblock %}
+
+{% block content %}
+
+    <section id="hero">
+        <h1>Testing Flask and jinja</h1>
+    </section>
+
+    <section id="things">
+
+        {% for things in things%}
+
+            <article>
+
+                <header>
+                    {{ things ["name"] }}
+                </header>
+                
+                    <p> Cost ${{ things ["cost"] }} </p>
+                
+                <footer>
+                    <a href="/thing/{{ things ['id'] }}">More</a>
+
+                    <a href="/delete/{{ things ['id'] }}">Delete</a>
+
+                </footer>
+
+            </article>
+           
+
+        {% endfor %}
+
+    </section>
+{% endblock %}

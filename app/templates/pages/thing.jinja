@@ -1,0 +1,36 @@
+
+
+{% extends 'pages/base.jinja' %}
+
+{% block title %}
+    Flask industries - Single thing
+{% endblock %}
+
+{% block content %}
+
+    <section id="item">
+        <h1>Item</h1>
+    </section>
+
+    <section id="things">
+
+            <article>
+
+                <header>
+                    {{ thing ["name"] }}
+                </header>
+                
+                    <p> Cost ${{ thing ["cost"] }} </p>
+
+                    <p> Is it good: {{ thing ["Is it good"] }} </p>
+
+                    <p> Does it work hard: {{ thing ["Does it work hard"] }} </p>
+                
+                <footer>
+                    Delete
+                </footer>
+
+            </article>
+           
+    </section>
+{% endblock %}

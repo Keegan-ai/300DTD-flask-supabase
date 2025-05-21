@@ -1,0 +1,8 @@
+# Virtual Env.
+venv
+
+#compiled Python
+__pycache__
+
+#Enviroment Variables
+.env
